@@ -9,7 +9,6 @@ var day := 1
 var cash := 1000
 var max_cash := 999999
 var ap := 3
-var mp := 5
 var next_scene := 0
 var stats := {
 	"miss_streak": 0,

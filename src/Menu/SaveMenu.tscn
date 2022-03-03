@@ -37,19 +37,19 @@ rect_min_size = Vector2( 0, 125 )
 [node name="Save" type="Button" parent="SaveOptions"]
 margin_top = 152.0
 margin_right = 300.0
-margin_bottom = 172.0
+margin_bottom = 177.0
 text = "SAVE"
 
 [node name="Load" type="Button" parent="SaveOptions"]
-margin_top = 176.0
+margin_top = 181.0
 margin_right = 300.0
-margin_bottom = 196.0
+margin_bottom = 206.0
 text = "LOAD"
 
 [node name="Close" type="Button" parent="SaveOptions"]
-margin_top = 200.0
+margin_top = 210.0
 margin_right = 300.0
-margin_bottom = 220.0
+margin_bottom = 235.0
 text = "CLOSE"
 
 [connection signal="item_selected" from="SaveOptions/SaveSlots" to="." method="_on_SaveSlots_item_selected"]
