@@ -1,6 +1,5 @@
 extends Control
 
-#var text_data: Resource = preload("res://data/text_data.tres")
 onready var textbox = $Textbox
 onready var choice = $Choice
 

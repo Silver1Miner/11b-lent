@@ -21,6 +21,7 @@ config/windows_native_icon="res://icon.ico"
 
 PlayerData="*res://src/Player/PlayerData.tscn"
 AudioManager="*res://src/Audio/AudioManager.tscn"
+TextData="*res://data/TextData.tscn"
 
 [display]
 

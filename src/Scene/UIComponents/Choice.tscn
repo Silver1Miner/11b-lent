@@ -3,35 +3,33 @@
 [ext_resource path="res://assets/ui/UI.tres" type="Theme" id=1]
 [ext_resource path="res://src/Scene/UIComponents/Choice.gd" type="Script" id=2]
 
-[node name="Choice" type="VBoxContainer"]
+[node name="Choice" type="ColorRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 1 )
+color = Color( 0, 0, 0, 0.0784314 )
+script = ExtResource( 2 )
+
+[node name="Options" type="VBoxContainer" parent="."]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -150.0
-margin_top = -91.0
+margin_top = -42.0
 margin_right = 150.0
-margin_bottom = 91.0
-theme = ExtResource( 1 )
-script = ExtResource( 2 )
-
-[node name="Label" type="Label" parent="."]
-margin_right = 300.0
-margin_bottom = 50.0
-rect_min_size = Vector2( 300, 50 )
-text = "What should I do?"
-align = 1
-valign = 1
-
-[node name="Options" type="VBoxContainer" parent="."]
-margin_top = 54.0
-margin_right = 300.0
-margin_bottom = 138.0
+margin_bottom = 42.0
 
 [node name="Option1" type="Button" parent="Options"]
 margin_right = 300.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 200, 40 )
+focus_neighbour_left = NodePath("../Option2")
+focus_neighbour_top = NodePath("../Option2")
+focus_neighbour_right = NodePath("../Option2")
+focus_neighbour_bottom = NodePath("../Option2")
+focus_next = NodePath("../Option2")
+focus_previous = NodePath("../Option2")
 text = "Choice 1"
 
 [node name="Option2" type="Button" parent="Options"]
@@ -39,6 +37,12 @@ margin_top = 44.0
 margin_right = 300.0
 margin_bottom = 84.0
 rect_min_size = Vector2( 200, 40 )
+focus_neighbour_left = NodePath("../Option1")
+focus_neighbour_top = NodePath("../Option1")
+focus_neighbour_right = NodePath("../Option1")
+focus_neighbour_bottom = NodePath("../Option1")
+focus_next = NodePath("../Option1")
+focus_previous = NodePath("../Option1")
 text = "Choice 2"
 
 [connection signal="pressed" from="Options/Option1" to="." method="_on_Option1_pressed"]

@@ -4,25 +4,14 @@ var music_db = 0.5
 var sound_db = 0.1
 var new_game = false
 var ending := 0 # 1 bad, # 2 true
-var has_worked = false
-var day := 1
-var cash := 1000
-var max_cash := 999999
-var ap := 3
-var next_scene := 0
+var current_scene := 0
 var stats := {
 	"miss_streak": 0,
 	"misses": 0,
 	"plays": 0,
 }
-var inventory := {
-	"Medicine": 1,
-	"Advent": 1,
-}
-
 var main_menu: PackedScene = preload("res://src/Menu/MainMenu.tscn")
-var max_days := 6
-var ending_background = preload("res://assets/Backgrounds/street.jpg")
+var ending_background = preload("res://assets/backgrounds/street.jpg")
 
 func _ready() -> void:
 	pass
@@ -30,45 +19,30 @@ func _ready() -> void:
 func load_player_data(data: Dictionary) -> void:
 	current_save = data.duplicate(true)
 	print(data)
-	cash = current_save["cash"]
+	current_scene = current_save["current_scene"]
 	stats = current_save["stats"]
-	inventory = current_save["inventory"]
-	day = current_save["day"]
-	ap = current_save["ap"]
 	print(current_save)
 
 func save_player_data() -> void:
-	current_save["cash"] = cash
+	current_save["current_scene"] = current_scene
 	current_save["stats"] = stats
-	current_save["inventory"] = inventory
-	current_save["day"] = day
-	current_save["ap"] = ap
 
 var current_save = {
-	"cash": 1000,
+	"current_scene": 0,
 	"stats": {
 		"miss_streak": 0,
 		"misses": 0,
 		"plays": 0,
 	},
-	"inventory": {
-		"Medicine": 1,
-		"Advent": 1,},
-	"day": 1,
-	"ap": 3,
 }
+
 const default_save = {
-	"cash": 1000,
+	"current_scene": 0,
 	"stats": {
 		"miss_streak": 0,
 		"misses": 0,
 		"plays": 0,
 	},
-	"inventory": {
-		"Medicine": 1,
-		"Advent": 1,},
-	"day": 1,
-	"ap": 3,
 }
 
 func get_save_date(slot) -> String:

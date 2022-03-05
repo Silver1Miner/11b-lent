@@ -1,9 +1,10 @@
-extends VBoxContainer
+extends ColorRect
 
 signal choice_made(choice)
 
-func populate_question(input: String) -> void:
-	Label.text = input
+func activate() -> void:
+	visible = true
+	$Options/Option1.grab_focus()
 
 func populate_choices(input1: String, input2: String) -> void:
 	$Options/Option1.text = input1
