@@ -23,7 +23,7 @@ func _ready() -> void:
 	$Timer.autostart = true
 	if $Timer.connect("timeout", self, "_on_timer_timeout") != OK:
 		push_error("timer connect fail")
-	play_dialogue(text_dialogue)
+	#play_dialogue(text_dialogue)
 
 func play_dialogue(text_data) -> void:
 	visible = true

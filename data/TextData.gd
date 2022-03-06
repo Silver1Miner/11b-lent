@@ -28,12 +28,13 @@ var scene_order := {
 	2: [3, 4], # 2 leads to choice
 	3: 5,
 	4: 5,
+	5: 30,
 }
 
 var choice_text := {
 	2: [
-		"",
-		"",
+		"Choice A",
+		"Choice B",
 	]
 }
 
@@ -52,22 +53,50 @@ var scenes := {
 "1": {"name": "Mark", "profile": "test",
 "text": "Usually it is caused by damage to the thalamus or the cerebral cortex."},
 "2": {"name": "Mark", "profile": "test",
-"text": "."},
+"text": "This is scene 1."},
+	},
+	2: {
+"0": {"name": "Mark", "profile": "test",
+"text": "This is scene 2."},
+"1": {"name": "Mark", "profile": "test",
+"text": "Choose an option."},
+"2": {"name": "Mark", "profile": "test",
+"text": "What should I do?"},
+	},
+	3: {
+"0": {"name": "Mark", "profile": "test",
+"text": "You chose choice A."},
+	},
+	4: {
+"0": {"name": "Mark", "profile": "test",
+"text": "You chose choice B."},
+	},
+	5: {
+"0": {"name": "Mark", "profile": "test",
+"text": "This is scene 5."},
+"1": {"name": "Mark", "profile": "test",
+"text": "What will happen now?"},
 	},
 # Ending Scenes
-	20: { # Good Ending
+	30: { # Placeholder Ending
+"0": {"name": "Mark", "profile": "test",
+"text": "I have no idea how you got here, but this is the error message ending."},
+"1": {"name": "", "profile": "test",
+"text": "ERROR Ending"},
+	},
+	31: { # Good Ending
 "0": {"name": "Mark", "profile": "test",
 "text": "'Hi Natalie. I know. It's been too long. I should have visited more."},
 "1": {"name": "", "profile": "test",
 "text": "Good Ending"},
 	},
-	21: { # Neutral Ending
+	32: { # Neutral Ending
 "0": {"name": "Mark", "profile": "test",
 "text": "'Hi Natalie. I know. It's been too long."},
 "1": {"name": "", "profile": "test",
 "text": "Neutral Ending."},
 	},
-	22: { # Bad Ending
+	33: { # Bad Ending
 "0": {"name": "Mark", "profile": "test",
 "text": "'Hi Natalie. I know. It's been too long."},
 "1": {"name": "", "profile": "test",

@@ -107,7 +107,9 @@ var credits = [
 		"Krita",
 	],[
 		"This is a work of fiction.",
-		"Any resemblance to actual events or persons, living or dead, is entirely coincidental."
+		"Any resemblance to actual events or persons,",
+		"living or dead,",
+		"is entirely coincidental."
 	],[
 		"For 'Lily'"
 	]

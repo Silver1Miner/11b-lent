@@ -10,8 +10,8 @@ func _on_New_pressed() -> void:
 	PlayerData.new_game = true
 	PlayerData.ending = 0
 	PlayerData.load_player_data(PlayerData.default_save)
-	#if get_tree().change_scene_to(PlayerData.credits) != OK:
-	#	push_error("fail to change scene")
+	if get_tree().change_scene_to(PlayerData.dialogue_scene) != OK:
+		push_error("fail to change scene")
 
 func _on_Load_pressed() -> void:
 	PlayerData.ending = 0
