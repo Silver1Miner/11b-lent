@@ -13,7 +13,8 @@ var stats := {
 var main_menu: PackedScene = preload("res://src/Menu/MainMenu.tscn")
 var dialogue_scene: PackedScene = preload("res://src/Scene/DialogueScene.tscn")
 var credits: PackedScene = preload("res://src/Scene/TextScroll.tscn")
-var ending_background = preload("res://assets/backgrounds/street.jpg")
+var title_card: PackedScene = preload("res://src/Scene/TitleCard.tscn")
+var ending_background = preload("res://assets/backgrounds/park-field-min.jpg")
 
 func _ready() -> void:
 	pass
@@ -30,7 +31,7 @@ func save_player_data() -> void:
 	current_save["stats"] = stats
 
 var current_save = {
-	"current_scene": 1,
+	"current_scene": 0,
 	"stats": {
 		"miss_streak": 0,
 		"misses": 0,
@@ -39,7 +40,7 @@ var current_save = {
 }
 
 const default_save = {
-	"current_scene": 1,
+	"current_scene": 0,
 	"stats": {
 		"miss_streak": 0,
 		"misses": 0,

@@ -13,9 +13,9 @@ func _ready() -> void:
 	$Textbox.play_dialogue(TextData.get_scene(PlayerData.current_scene))
 
 func play_scene(is_fade: bool) -> void:
-	#$Background.set_texture(load(text_data.get_texture(PlayerData.next_scene)))
-	#if text_data.get_music(PlayerData.next_scene) != "res://assets/Audio/In_the_Bleak_Midwinter.ogg":
-	#	AudioManager.play_music(text_data.get_music(PlayerData.next_scene))
+	$Background.set_texture(load(TextData.get_texture(PlayerData.current_scene)))
+	if TextData.get_music(PlayerData.current_scene) != "res://assets/Audio/In_the_Bleak_Midwinter.ogg":
+		AudioManager.play_music(TextData.get_music(PlayerData.current_scene))
 	if is_fade:
 		$TransitionScene.play_transition()
 		yield($TransitionScene, "transition_finished")
@@ -31,10 +31,12 @@ func _on_text_finished() -> void:
 			$TransitionScene.transition_to(PlayerData.credits)
 		else:
 			PlayerData.current_scene = TextData.scene_order[PlayerData.current_scene]
-			play_scene(true)
+			if PlayerData.current_scene in TextData.title_scenes:
+				$TransitionScene.transition_to(PlayerData.title_card)
+			else:
+				play_scene(true)
 	else:
 		push_error("invalid data")
-	
 
 func _on_choice_made(decision) -> void:
 	print(decision)

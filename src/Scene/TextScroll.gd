@@ -23,6 +23,7 @@ var lines := []
 var text := []
 
 func _ready() -> void:
+	AudioManager.play_music("res://assets/audio/In_the_Bleak_Midwinter.ogg",0)
 	base_speed = 30
 	text = credits.duplicate(true)
 	#$image.texture = PlayerData.ending_background
