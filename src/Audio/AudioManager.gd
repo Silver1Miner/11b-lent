@@ -1,9 +1,12 @@
 extends AudioStreamPlayer
 
 onready var tween = $Tween
+var previous_path: String = ""
 
 # MUSIC
 func play_music(music_path: String, start: float = 0) -> void:
+	if music_path == previous_path:
+		return
 	tween.interpolate_property(self, "volume_db", linear2db(PlayerData.music_db), -80, 0.8, 1, Tween.EASE_IN, 0)
 	tween.start()
 	yield(tween, "tween_completed")
@@ -11,6 +14,7 @@ func play_music(music_path: String, start: float = 0) -> void:
 	tween.start()
 	stream = load(music_path)
 	play(start)
+	previous_path = music_path
 
 # SOUND
 var available = []

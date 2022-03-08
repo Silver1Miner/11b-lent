@@ -17,3 +17,9 @@ func _on_Option1_pressed() -> void:
 func _on_Option2_pressed() -> void:
 	emit_signal("choice_made", 1)
 	visible = false
+
+func _on_Option1_mouse_entered() -> void:
+	$Options/Option1.grab_focus()
+
+func _on_Option2_mouse_entered() -> void:
+	$Options/Option2.grab_focus()

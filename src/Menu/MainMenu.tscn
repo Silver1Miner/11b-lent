@@ -2,10 +2,10 @@
 
 [ext_resource path="res://src/Menu/MainMenu.gd" type="Script" id=1]
 [ext_resource path="res://src/Menu/SettingsMenu.tscn" type="PackedScene" id=2]
-[ext_resource path="res://src/Menu/SaveMenu.tscn" type="PackedScene" id=3]
 [ext_resource path="res://assets/ui/UI.tres" type="Theme" id=4]
 [ext_resource path="res://assets/backgrounds/park-min.jpg" type="Texture" id=5]
 [ext_resource path="res://assets/fonts/Asap-Bold.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://src/Menu/SceneSelect.tscn" type="PackedScene" id=7]
 
 [sub_resource type="DynamicFont" id=1]
 size = 64
@@ -49,7 +49,7 @@ margin_top = 50.0
 margin_right = 150.0
 margin_bottom = 80.0
 rect_min_size = Vector2( 150, 30 )
-text = "LOAD GAME"
+text = "SCENE SELECT"
 
 [node name="Settings" type="Button" parent="Options"]
 margin_top = 100.0
@@ -106,17 +106,18 @@ anchor_bottom = 1.0
 margin_left = -236.0
 margin_top = -19.0
 text = "Copyright © 2022 Jack Anderson "
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="SettingsMenu" parent="." instance=ExtResource( 2 )]
 visible = false
 
-[node name="SaveMenu" parent="." instance=ExtResource( 3 )]
+[node name="SceneSelect" parent="." instance=ExtResource( 7 )]
 visible = false
 
+[connection signal="mouse_entered" from="Options/New" to="." method="_on_New_mouse_entered"]
 [connection signal="pressed" from="Options/New" to="." method="_on_New_pressed"]
+[connection signal="mouse_entered" from="Options/Load" to="." method="_on_Load_mouse_entered"]
 [connection signal="pressed" from="Options/Load" to="." method="_on_Load_pressed"]
+[connection signal="mouse_entered" from="Options/Settings" to="." method="_on_Settings_mouse_entered"]
 [connection signal="pressed" from="Options/Settings" to="." method="_on_Settings_pressed"]
+[connection signal="mouse_entered" from="Options/Quit" to="." method="_on_Quit_mouse_entered"]
 [connection signal="pressed" from="Options/Quit" to="." method="_on_Quit_pressed"]

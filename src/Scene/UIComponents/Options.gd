@@ -4,7 +4,7 @@ func _ready() -> void:
 	visible = false
 
 func _unhandled_input(event: InputEvent) -> void:
-	if event.is_action_pressed("ui_cancel"):
+	if event.is_action_pressed("ui_home"):
 		visible = true
 		$VolumeControls/MusicVolume.set_value(db2linear(AudioServer.get_bus_volume_db(AudioServer.get_bus_index("Music"))))
 		$VolumeControls/SoundVolume.set_value(db2linear(AudioServer.get_bus_volume_db(AudioServer.get_bus_index("Sound"))))

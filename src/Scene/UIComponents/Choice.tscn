@@ -45,5 +45,7 @@ focus_next = NodePath("../Option1")
 focus_previous = NodePath("../Option1")
 text = "Choice 2"
 
+[connection signal="mouse_entered" from="Options/Option1" to="." method="_on_Option1_mouse_entered"]
 [connection signal="pressed" from="Options/Option1" to="." method="_on_Option1_pressed"]
+[connection signal="mouse_entered" from="Options/Option2" to="." method="_on_Option2_mouse_entered"]
 [connection signal="pressed" from="Options/Option2" to="." method="_on_Option2_pressed"]

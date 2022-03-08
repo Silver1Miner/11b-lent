@@ -74,7 +74,7 @@ func add_line():
 		section_next = true
 
 func _unhandled_input(event) -> void:
-	if event.is_action_pressed("ui_cancel"):
+	if event.is_action_pressed("ui_end"):
 		finish()
 	if event.is_action_pressed("ui_down") and !event.is_echo():
 		speed_up = true
