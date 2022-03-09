@@ -15,22 +15,35 @@ func get_music(scene_id) -> String:
 		return scenes[scene_id]["music"]
 	return scenes[-1]["music"]
 
-var scene_order := {
-	0: 1,
-	1: 2, # 1 leads to 2
-	2: [3, 4], # 2 leads to choice between 3 and 4
-	3: 5,
-	4: 5,
-	5: 30,
-}
-
 var profiles := {
 }
+
+var scene_order := {
+	0: 1,
+	1: [2, 3], # 1 leads to 2
+	2: 4, # 2 leads to choice between 3 and 4
+	4: 5,
+	5: [6, 7],
+	6: 8, 7: 8,
+	8: [9, 10],
+	9: 11, 10: 11, 11: 12,
+	12: [13, 14],
+	13: 15, 14: 15,
+	15: [16, 17],
+	16: 18, 17: 19,
+	18: [20, 21],
+	19: [22, 23],
+	20: 24, 21: 24,
+	22: 25, 23: 26
+}
+
+var endings := [3, 24, 25, 26]
 
 var title_scenes := {
 	1: ["Act I", "Ashes"],
 	5: ["Act II", "Passion"],
-	7: ["Act III", "Good"]
+	18: ["Act III", "Good"],
+	19: ["Act III", "Good"]
 }
 
 var choice_text := {

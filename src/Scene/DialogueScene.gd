@@ -33,7 +33,7 @@ func _on_text_finished() -> void:
 		$Choice.activate()
 		$Textbox.active = false
 	elif TextData.scene_order[PlayerData.current_scene] is int:
-		if TextData.scene_order[PlayerData.current_scene] >= 30: # ending
+		if PlayerData.current_scene in TextData.endings:
 			$TransitionScene.transition_to(PlayerData.credits)
 		else:
 			PlayerData.current_scene = TextData.scene_order[PlayerData.current_scene]

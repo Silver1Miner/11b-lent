@@ -33,7 +33,7 @@ func play_dialogue(text_data) -> void:
 	$Timer.start()
 	dialogue = text_data
 	page = "0"
-	text.set_bbcode(dialogue[page]["text"])
+	text.set_text(dialogue[page]["text"])
 	nametag.set_text(dialogue[page]["name"])
 	if dialogue[page]["profile"] in TextData.profiles:
 		avatar.set_texture(TextData.profiles[dialogue[page]["profile"]])
@@ -47,7 +47,7 @@ func _on_next() -> void:
 		if text.get_visible_characters() > text.get_total_character_count():
 			if int(page) < dialogue.size() - 1:
 				page = str(int(page) + 1)
-				text.set_bbcode(dialogue[page]["text"])
+				text.set_text(dialogue[page]["text"])
 				nametag.set_text(dialogue[page]["name"])
 				if dialogue[page]["profile"] in TextData.profiles:
 					avatar.set_texture(TextData.profiles[dialogue[page]["profile"]])
@@ -68,7 +68,7 @@ func _unhandled_input(event) -> void:
 
 func end_text() -> void:
 	nametag.text = ""
-	text.clear()
+	text.text = ""
 	$Panels/Right/TextOptions.visible = false
 	emit_signal("text_finished")
 
