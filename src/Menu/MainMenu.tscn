@@ -96,7 +96,7 @@ anchor_left = 1.0
 anchor_right = 1.0
 margin_left = -92.0
 margin_bottom = 19.0
-text = "v0.1.0 Demo "
+text = "v0.0.0 Demo "
 
 [node name="credits" type="Label" parent="."]
 anchor_left = 1.0

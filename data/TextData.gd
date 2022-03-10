@@ -19,10 +19,9 @@ var profiles := {
 }
 
 var scene_order := {
-	0: 1,
-	1: [2, 3], # 1 leads to 2
-	2: 4, # 2 leads to choice between 3 and 4
-	4: 5,
+	0: 1, # 0 leads to 1
+	1: [2, 3], # 1 leads to choice between 2 and 3
+	2: 4, 4: 5,
 	5: [6, 7],
 	6: 8, 7: 8,
 	8: [9, 10],
@@ -36,62 +35,40 @@ var scene_order := {
 	20: 24, 21: 24,
 	22: 25, 23: 26
 }
-
-var endings := [3, 24, 25, 26]
-
-var title_scenes := {
+var endings := [3, 24, 25, 26] # credits play after scene
+var title_scenes := { # title card plays before scene
 	1: ["Act I", "Ashes"],
 	5: ["Act II", "Passion"],
-	18: ["Act III", "Good"],
-	19: ["Act III", "Good"]
+	18: ["Act III", "Anastasis"],
+	19: ["Act III", "Anastasis"]
+}
+var choice_text := { # choice appears after scene
+	1: ["Continue","To Poor End"],
+	5: ["To Scene 6","To Scene 7"],
+	8: ["To Scene 9","To Scene 10"],
+	12: ["To Scene 13","To Scene 14"],
+	15: ["To Good End","To Neutral/Bad End"],
+	18: ["To Scene 20","To Scene 21"],
+	19: ["To Bad End","To Neutral End"],
 }
 
-var choice_text := {
-	2: [
-		"Choice A",
-		"Choice B",
-	],
-}
-
+var act1: Resource = preload("res://data/act1.tres")
+var act2: Resource = preload("res://data/act2.tres")
+var act3: Resource = preload("res://data/act3.tres")
 var scenes := {
 # Error result
 	-1: {
 "dialogue": {
 "0": {"name": "Test", "profile": "test",
-"text": "This is generic error return result"},
-"1": {"name": "Test", "profile": "test",
-"text": "It appears when text is missing. Sorry about that."},
+"text": "This is generic error return result when text is missing."},
 },
 "background": "res://assets/backgrounds/park-min.jpg",
 "music": "res://assets/audio/In_the_Bleak_Midwinter.ogg",
 	},
 # Play Scenes
-	0: {
-"dialogue": {
-"0": {"name": "Mark", "profile": "test",
-"text": "Achromatopsia. The total inability to see color."},
-"1": {"name": "Mark", "profile": "test",
-"text": "Usually it is caused by damage to the thalamus or the cerebral cortex."},
-"2": {"name": "Mark", "profile": "test",
-"text": "This is scene 0."},
-},
-	},
-	1: {
-"dialogue": {
-"0": {"name": "Mark", "profile": "test",
-"text": "This is scene 1."},
-	},
-	},
-	2: {
-"dialogue": {
-"0": {"name": "Mark", "profile": "test",
-"text": "This is scene 2."},
-"1": {"name": "Mark", "profile": "test",
-"text": "Choose an option."},
-"2": {"name": "Mark", "profile": "test",
-"text": "What should I do?"},
-	},
-	},
+	0: act1.scene_0,
+	1: act1.scene_1,
+	2: act1.scene_2,
 	3: {
 "dialogue": {
 "0": {"name": "Mark", "profile": "test",
@@ -112,16 +89,7 @@ var scenes := {
 "text": "What will happen now?"},
 	},
 	},
-# Ending Scenes
-	30: { # Placeholder Ending
-"dialogue": {
-"0": {"name": "Mark", "profile": "test",
-"text": "I have no idea how you got here, but this is the error message ending."},
-"1": {"name": "", "profile": "test",
-"text": "ERROR Ending"},
-	},
-	},
-	31: { # Good Ending
+	24: { # Good Ending
 "dialogue": {
 "0": {"name": "Mark", "profile": "test",
 "text": "'Hi Natalie. I know. It's been too long. I should have visited more."},
@@ -129,20 +97,20 @@ var scenes := {
 "text": "Good Ending"},
 	},
 	},
-	32: { # Neutral Ending
+	25: { # Bad Ending
 "dialogue": {
-"0": {"name": "Mark", "profile": "test",
-"text": "'Hi Natalie. I know. It's been too long."},
+"0": {"name": "Lily", "profile": "test",
+"text": "'You're a creep.'"},
 "1": {"name": "", "profile": "test",
-"text": "Neutral Ending."},
+"text": "Bad Ending."},
 	},
 	},
-	33: { # Bad Ending
+	26: { # Neutral Ending
 "dialogue": {
 "0": {"name": "Mark", "profile": "test",
-"text": "'Hi Natalie. I know. It's been too long."},
+"text": "I get up and leave."},
 "1": {"name": "", "profile": "test",
-"text": "Bad Ending"},
+"text": "Neutral Ending"},
 	},
 	},
 }

@@ -92,6 +92,7 @@ margin_left = -230.0
 margin_top = -15.0
 margin_right = 230.0
 margin_bottom = 35.0
+autowrap = true
 
 [node name="Right" type="ColorRect" parent="Panels"]
 margin_left = 560.0

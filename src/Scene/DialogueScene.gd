@@ -27,20 +27,19 @@ func play_scene(is_fade: bool) -> void:
 	$Textbox.play_dialogue(TextData.get_scene(PlayerData.current_scene))
 
 func _on_text_finished() -> void:
-	print("finished")
-	if TextData.scene_order[PlayerData.current_scene] is Array:
+	print("finished ", PlayerData.current_scene)
+	if PlayerData.current_scene in TextData.endings:
+		$TransitionScene.transition_to(PlayerData.credits)
+	elif TextData.scene_order[PlayerData.current_scene] is Array:
 		$Choice.populate_choices(TextData.choice_text[PlayerData.current_scene])
 		$Choice.activate()
 		$Textbox.active = false
 	elif TextData.scene_order[PlayerData.current_scene] is int:
-		if PlayerData.current_scene in TextData.endings:
-			$TransitionScene.transition_to(PlayerData.credits)
+		PlayerData.current_scene = TextData.scene_order[PlayerData.current_scene]
+		if PlayerData.current_scene in TextData.title_scenes:
+			$TransitionScene.transition_to(PlayerData.title_card)
 		else:
-			PlayerData.current_scene = TextData.scene_order[PlayerData.current_scene]
-			if PlayerData.current_scene in TextData.title_scenes:
-				$TransitionScene.transition_to(PlayerData.title_card)
-			else:
-				play_scene(true)
+			play_scene(true)
 	else:
 		push_error("invalid data")
 
