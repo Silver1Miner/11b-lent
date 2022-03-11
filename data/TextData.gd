@@ -42,8 +42,12 @@ var title_scenes := { # title card plays before scene
 	18: ["Act III", "Anastasis"],
 	19: ["Act III", "Anastasis"]
 }
+
+var act1: Resource = preload("res://data/act1.tres")
+var act2: Resource = preload("res://data/act2.tres")
+var act3: Resource = preload("res://data/act3.tres")
 var choice_text := { # choice appears after scene
-	1: ["Continue","To Poor End"],
+	1: act1.choice_1,
 	5: ["To Scene 6","To Scene 7"],
 	8: ["To Scene 9","To Scene 10"],
 	12: ["To Scene 13","To Scene 14"],
@@ -51,10 +55,6 @@ var choice_text := { # choice appears after scene
 	18: ["To Scene 20","To Scene 21"],
 	19: ["To Bad End","To Neutral End"],
 }
-
-var act1: Resource = preload("res://data/act1.tres")
-var act2: Resource = preload("res://data/act2.tres")
-var act3: Resource = preload("res://data/act3.tres")
 var scenes := {
 # Error result
 	-1: {
@@ -69,26 +69,9 @@ var scenes := {
 	0: act1.scene_0,
 	1: act1.scene_1,
 	2: act1.scene_2,
-	3: {
-"dialogue": {
-"0": {"name": "Mark", "profile": "test",
-"text": "You chose choice A."},
-	},
-	},
-	4: {
-"dialogue": {
-"0": {"name": "Mark", "profile": "test",
-"text": "You chose choice B."},
-	},
-	},
-	5: {
-"dialogue": {
-"0": {"name": "Mark", "profile": "test",
-"text": "This is scene 5."},
-"1": {"name": "Mark", "profile": "test",
-"text": "What will happen now?"},
-	},
-	},
+	3: act1.scene_3,
+	4: act1.scene_4,
+	5: act2.scene_5,
 	24: { # Good Ending
 "dialogue": {
 "0": {"name": "Mark", "profile": "test",

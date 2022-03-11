@@ -1,6 +1,7 @@
 extends Control
 
 signal text_finished()
+signal change_background(background)
 var page = "0"
 var text_playing = true
 var dialogue = {}
@@ -35,10 +36,12 @@ func play_dialogue(text_data) -> void:
 	page = "0"
 	text.set_text(dialogue[page]["text"])
 	nametag.set_text(dialogue[page]["name"])
-	if dialogue[page]["profile"] in TextData.profiles:
+	if "profile" in dialogue[page] and dialogue[page]["profile"] in TextData.profiles:
 		avatar.set_texture(TextData.profiles[dialogue[page]["profile"]])
 	else:
 		avatar.texture = null
+	if "background" in dialogue[page]:
+		emit_signal("change_background", dialogue[page]["background"])
 	text.set_visible_characters(0)
 	set_process_input(true)
 
@@ -49,10 +52,12 @@ func _on_next() -> void:
 				page = str(int(page) + 1)
 				text.set_text(dialogue[page]["text"])
 				nametag.set_text(dialogue[page]["name"])
-				if dialogue[page]["profile"] in TextData.profiles:
+				if "profile" in dialogue[page] and dialogue[page]["profile"] in TextData.profiles:
 					avatar.set_texture(TextData.profiles[dialogue[page]["profile"]])
 				else:
 					avatar.texture = null
+				if "background" in dialogue[page]:
+					emit_signal("change_background", dialogue[page]["background"])
 				text.set_visible_characters(0)
 			elif int(page) >= dialogue.size() - 1:
 				end_text()
