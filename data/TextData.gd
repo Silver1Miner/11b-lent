@@ -19,11 +19,11 @@ var profiles := {
 }
 
 var scene_order := {
-	0: 1, # 0 leads to 1
-	1: [2, 3], # 1 leads to choice between 2 and 3
-	2: 4, 4: 5,
-	5: [6, 7],
-	6: 8, 7: 8,
+	0: 1,
+	1: 2,
+	2: [3, 4], # 2 leads to choice between 3 and 4
+	3: 5, 4: 6,
+	6: 7, 7: 8,
 	8: [9, 10],
 	9: 11, 10: 11, 11: 12,
 	12: [13, 14],
@@ -35,10 +35,11 @@ var scene_order := {
 	20: 24, 21: 24,
 	22: 25, 23: 26
 }
-var endings := [3, 24, 25, 26] # credits play after scene
+var endings := [5, 24, 25, 26] # credits play after scene
 var title_scenes := { # title card plays before scene
 	1: ["Act I", "Ashes"],
 	5: ["Act II", "Passion"],
+	6: ["Act II", "Passion"],
 	18: ["Act III", "Anastasis"],
 	19: ["Act III", "Anastasis"]
 }
