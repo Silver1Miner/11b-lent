@@ -32,3 +32,6 @@ func _on_Settings_mouse_entered() -> void:
 
 func _on_Quit_mouse_entered() -> void:
 	$Options/Quit.grab_focus()
+
+func _on_Extras_mouse_entered() -> void:
+	$Options/Extras.grab_focus()

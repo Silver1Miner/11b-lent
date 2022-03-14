@@ -38,8 +38,7 @@ var scene_order := {
 var endings := [5, 24, 25, 26] # credits play after scene
 var title_scenes := { # title card plays before scene
 	1: ["Act I", "Ashes"],
-	5: ["Act II", "Passion"],
-	6: ["Act II", "Passion"],
+	8: ["Act II", "Passion"],
 	18: ["Act III", "Anastasis"],
 	19: ["Act III", "Anastasis"]
 }
@@ -48,13 +47,12 @@ var act1: Resource = preload("res://data/act1.tres")
 var act2: Resource = preload("res://data/act2.tres")
 var act3: Resource = preload("res://data/act3.tres")
 var choice_text := { # choice appears after scene
-	1: act1.choice_1,
-	5: ["To Scene 6","To Scene 7"],
-	8: ["To Scene 9","To Scene 10"],
-	12: ["To Scene 13","To Scene 14"],
-	15: ["To Good End","To Neutral/Bad End"],
-	18: ["To Scene 20","To Scene 21"],
-	19: ["To Bad End","To Neutral End"],
+	2: act1.choice_1,
+	8: act2.choice_2,
+	12: act2.choice_3,
+	15: act2.choice_4,
+	18: act3.choice_5,
+	19: act3.choice_6,
 }
 var scenes := {
 # Error result
@@ -67,12 +65,10 @@ var scenes := {
 "music": "res://assets/audio/In_the_Bleak_Midwinter.ogg",
 	},
 # Play Scenes
-	0: act1.scene_0,
-	1: act1.scene_1,
-	2: act1.scene_2,
-	3: act1.scene_3,
-	4: act1.scene_4,
-	5: act2.scene_5,
+	0: act1.scene_0,1: act1.scene_1,2: act1.scene_2,
+	3: act1.scene_3,4: act1.scene_4,5: act1.scene_5,
+	6: act1.scene_6,7: act1.scene_7,
+	8: act2.scene_8,
 	24: { # Good Ending
 "dialogue": {
 "0": {"name": "Mark", "profile": "test",
