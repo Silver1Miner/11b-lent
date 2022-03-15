@@ -46,7 +46,7 @@ margin_top = 50.0
 margin_right = 150.0
 margin_bottom = 80.0
 rect_min_size = Vector2( 150, 30 )
-text = "SCENE SELECT"
+text = "LOAD GAME"
 
 [node name="Extras" type="Button" parent="Options"]
 margin_top = 100.0
