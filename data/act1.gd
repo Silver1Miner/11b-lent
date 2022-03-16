@@ -55,7 +55,7 @@ var scene_1 = { # to scene 2
 "17": {"name": "Old Man", "profile": "old-man",
 "text": "'Great! I'll be back soon.'"},
 "18": {"name": "Mark",
-"text": "The boss leaves without another word, and I dutifully step out into the front..."},
+"text": "The Old Man leaves without another word, and I dutifully step out into the front..."},
 },}
 
 var scene_2 = {
@@ -177,7 +177,7 @@ var scene_5 := { # to Poor ending
 "11": {"name": "Old Man", "profile": "old-man",
 "text": "'I was hoping to throw a little going away party, but Rob turned it down as he wanted to start his new job immediately.'"},
 "12": {"name": "Mark", "profile": "old-man",
-"text": "Thank you, Rob. I never really liked the boss's parties very much."},
+"text": "Thank you, Rob. I never really liked the Old Man's parties very much."},
 "13": {"name": "Old Man", "profile": "old-man",
 "text": "'Anyways, nothing will change on your end, and I'll probably find a fill for Rob's old position soon enough."},
 "14": {"name": "Mark", "profile": "old-man",
@@ -222,7 +222,7 @@ var scene_6 := { # to scene 7
 "11": {"name": "Old Man", "profile": "old-man",
 "text": "'I was hoping to throw a little going away party, but Rob turned it down as he wanted to start his new job immediately.'"},
 "12": {"name": "Mark", "profile": "old-man",
-"text": "Thank you, Rob. I never really liked attending the boss's 'parties.'"},
+"text": "Thank you, Rob. I never really liked attending the Old Man's 'parties.'"},
 "13": {"name": "Old Man", "profile": "old-man",
 "text": "'Anyways, nothing will change on your end, and I've already filled Rob's old position."},
 "14": {"name": "Mark", "profile": "old-man",
