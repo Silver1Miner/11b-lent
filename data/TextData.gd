@@ -68,7 +68,10 @@ var scenes := {
 	0: act1.scene_0,1: act1.scene_1,2: act1.scene_2,
 	3: act1.scene_3,4: act1.scene_4,5: act1.scene_5,
 	6: act1.scene_6,7: act1.scene_7,
-	8: act2.scene_8,
+	8: act2.scene_8,9: act2.scene_9,10: act2.scene_10,
+	11: act2.scene_11, 12: act2.scene_12, 13: act2.scene_13,
+	14: act2.scene_14, 15: act2.scene_15, 16: act2.scene_16,
+	17: act2.scene_17,
 	24: { # Good Ending
 "dialogue": {
 "0": {"name": "Mark", "profile": "test",
