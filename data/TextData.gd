@@ -72,14 +72,9 @@ var scenes := {
 	11: act2.scene_11, 12: act2.scene_12, 13: act2.scene_13,
 	14: act2.scene_14, 15: act2.scene_15, 16: act2.scene_16,
 	17: act2.scene_17,
-	24: { # Good Ending
-"dialogue": {
-"0": {"name": "Mark", "profile": "test",
-"text": "'Hi Natalie. I know. It's been too long. I should have visited more."},
-"1": {"name": "", "profile": "test",
-"text": "Good Ending"},
-	},
-	},
+	18: act3.scene_18, 20: act3.scene_20, 21: act3.scene_21,
+	24: act3.scene_42, # GOOD ENDING
+	19: act3.scene_19,
 	25: { # Bad Ending
 "dialogue": {
 "0": {"name": "Lily", "profile": "test",
