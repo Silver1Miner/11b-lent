@@ -135,9 +135,6 @@ margin_bottom = -40.0
 mouse_filter = 2
 expand = true
 stretch_mode = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="LeftProfile" type="TextureRect" parent="."]
 margin_left = 50.0

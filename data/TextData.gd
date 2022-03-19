@@ -16,6 +16,7 @@ func get_music(scene_id) -> String:
 	return scenes[-1]["music"]
 
 var profiles := {
+	"lily": preload("res://assets/profiles/lily.png"),
 }
 
 var scene_order := {
@@ -33,9 +34,9 @@ var scene_order := {
 	18: [20, 21],
 	19: [22, 23],
 	20: 24, 21: 24,
-	22: 25, 23: 26
+	22: 25, 23: 26, 26: 27
 }
-var endings := [5, 24, 25, 26] # credits play after scene
+var endings := [5, 24, 25, 27] # credits play after scene
 var title_scenes := { # title card plays before scene
 	1: ["Act I", "Ordinal"],
 	8: ["Act II", "Shrove"],
@@ -73,22 +74,7 @@ var scenes := {
 	14: act2.scene_14, 15: act2.scene_15, 16: act2.scene_16,
 	17: act2.scene_17,
 	18: act3.scene_18, 20: act3.scene_20, 21: act3.scene_21,
-	24: act3.scene_42, # GOOD ENDING
-	19: act3.scene_19,
-	25: { # Bad Ending
-"dialogue": {
-"0": {"name": "Lily", "profile": "test",
-"text": "'You're a creep.'"},
-"1": {"name": "", "profile": "test",
-"text": "Bad Ending."},
-	},
-	},
-	26: { # Neutral Ending
-"dialogue": {
-"0": {"name": "Mark", "profile": "test",
-"text": "I get up and leave."},
-"1": {"name": "", "profile": "test",
-"text": "Neutral Ending"},
-	},
-	},
+	24: act3.scene_24, # GOOD ENDING
+	19: act3.scene_19, 25: act3.scene_25, # Bad Ending
+	26: act3.scene_26, 27: act3.scene_27, # Neutral Ending
 }

@@ -110,7 +110,7 @@ var scene_4 = { # Help, continue game, to scene 6
 "14": {"name": "Girl", "profile": "lily",
 "text": "'Thanks again!'"},
 "15": {"name": "Mark", "profile": "lily",
-"text": "She briefly glances at a small gold watch on her wrist."},
+"text": "She briefly glances at a small watch on her wrist."},
 "16": {"name": "Girl", "profile": "lily",
 "text": "'Sorry, I've got to run now, but I'll be seeing you again soon!'"},
 "17": {"name": "Mark", "profile": "lily",
