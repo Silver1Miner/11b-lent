@@ -37,10 +37,10 @@ var scene_order := {
 }
 var endings := [5, 24, 25, 26] # credits play after scene
 var title_scenes := { # title card plays before scene
-	1: ["Act I", "Ashes"],
-	8: ["Act II", "Passion"],
-	18: ["Act III", "Anastasis"],
-	19: ["Act III", "Anastasis"]
+	1: ["Act I", "Ordinal"],
+	8: ["Act II", "Shrove"],
+	18: ["Act III", "Passion"],
+	19: ["Act III", "Passion"]
 }
 
 var act1: Resource = preload("res://data/act1.tres")
