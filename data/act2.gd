@@ -61,7 +61,7 @@ var scene_8 := { # to scene 9
 "28": {"name": "Lily", "profile": "",
 "text": "'Not only is it fun to read the individual stories, but it's also fun to try to piece them all together,"},
 "29": {"name": "Lily", "profile": "",
-"text": "'looking through each story and finding the references to each other like solving a puzzle!'"},
+"text": "'looking through each story and finding the references to each other, almost like solving a puzzle!'"},
 "30": {"name": "Mark", "profile": "lily",
 "text": "I can't help but smile."},
 "31": {"name": "Mark", "profile": "lily",

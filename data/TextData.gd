@@ -17,6 +17,8 @@ func get_music(scene_id) -> String:
 
 var profiles := {
 	"lily": preload("res://assets/profiles/lily.png"),
+	"lily-back": preload("res://assets/profiles/lily-back.png"),
+	"old-man": preload("res://assets/profiles/oldman.png")
 }
 
 var scene_order := {
@@ -38,8 +40,8 @@ var scene_order := {
 }
 var endings := [5, 24, 25, 27] # credits play after scene
 var title_scenes := { # title card plays before scene
-	1: ["Act I", "Ordinal"],
-	8: ["Act II", "Shrove"],
+	1: ["Act I", "Ash"],
+	8: ["Act II", "Fasting"],
 	18: ["Act III", "Passion"],
 	19: ["Act III", "Passion"]
 }
