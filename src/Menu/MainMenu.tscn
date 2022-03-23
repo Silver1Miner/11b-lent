@@ -2,8 +2,8 @@
 
 [ext_resource path="res://src/Menu/MainMenu.gd" type="Script" id=1]
 [ext_resource path="res://src/Menu/SettingsMenu.tscn" type="PackedScene" id=2]
+[ext_resource path="res://assets/backgrounds/cherry-grey-min.jpg" type="Texture" id=3]
 [ext_resource path="res://assets/ui/UI.tres" type="Theme" id=4]
-[ext_resource path="res://assets/backgrounds/park-min.jpg" type="Texture" id=5]
 [ext_resource path="res://assets/fonts/Asap-Bold.ttf" type="DynamicFontData" id=6]
 [ext_resource path="res://src/Menu/SceneSelect.tscn" type="PackedScene" id=7]
 
@@ -21,7 +21,7 @@ script = ExtResource( 1 )
 self_modulate = Color( 0.686275, 0.686275, 0.686275, 1 )
 anchor_right = 1.0
 anchor_bottom = 1.0
-texture = ExtResource( 5 )
+texture = ExtResource( 3 )
 expand = true
 
 [node name="Options" type="VBoxContainer" parent="."]
@@ -97,7 +97,7 @@ anchor_left = 1.0
 anchor_right = 1.0
 margin_left = -92.0
 margin_bottom = 19.0
-text = "v0.0.0 Demo "
+text = "v0.1.0 Demo "
 
 [node name="credits" type="Label" parent="."]
 anchor_left = 1.0

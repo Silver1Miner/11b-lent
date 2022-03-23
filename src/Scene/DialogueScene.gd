@@ -20,16 +20,19 @@ func play_scene(is_fade: bool) -> void:
 		PlayerData.completed_scenes.append(PlayerData.current_scene)
 		PlayerData.save_player_data()
 	$Textbox.active = true
-	$Background.set_texture(load(TextData.get_texture(PlayerData.current_scene)))
 	if TextData.get_music(PlayerData.current_scene) != "res://assets/Audio/In_the_Bleak_Midwinter.ogg":
 		AudioManager.play_music(TextData.get_music(PlayerData.current_scene))
 	if is_fade:
 		$TransitionScene.play_transition()
+		yield($TransitionScene, "transition_half_finished")
+	$Textbox/LeftProfile.texture = null
+	$Background.set_texture(load(TextData.get_texture(PlayerData.current_scene)))
+	if is_fade:
 		yield($TransitionScene, "transition_finished")
 	$Textbox.play_dialogue(TextData.get_scene(PlayerData.current_scene))
 
 func _on_change_background(background) -> void:
-	$Background.set_texture(background)
+	$Background.set_texture(load(background))
 
 func _on_text_finished() -> void:
 	print("finished ", PlayerData.current_scene)

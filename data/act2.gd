@@ -73,10 +73,12 @@ var scene_8 := { # to scene 9
 "34": {"name": "Lily", "profile": "lily",
 "text": "'I mean, only if you're willing of course."},
 },
+"background": "res://assets/backgrounds/office.jpg",
 }
 var choice_2 = ["Not willing to share","Let her read them"]
 
 var scene_9 : = {
+"dialogue": {
 "0": {"name": "Mark", "profile": "lily",
 "text": "'... Sorry, but they're not really ready to share quite yet...'"},
 "1": {"name": "Lily", "profile": "lily",
@@ -117,8 +119,11 @@ var scene_9 : = {
 "text": "I can't help but smile."},
 "19": {"name": "Mark", "profile": "lily",
 "text": "Against my better judgment, I can't but feel almost fond of her."},
+},"background": "res://assets/backgrounds/office.jpg",
 }
+
 var scene_10 := {
+"dialogue": {
 "0": {"name": "Mark", "profile": "lily",
 "text": "'Sure, I'd be willing to share.'"},
 "1": {"name": "Mark", "profile": "lily",
@@ -147,8 +152,11 @@ var scene_10 := {
 "text": "I decide against telling her that I digitize copies of my notebooks after writing them and thus have backups."},
 "13": {"name": "Mark", "profile": "lily",
 "text": "Against my better judgment, I can't but feel almost fond of her."},
+},
+"background": "res://assets/backgrounds/office.jpg",
 }
 var scene_11 := {
+"dialogue": {
 "0": {"name": "Mark", "profile": "",
 "text": "Right on time, there is a knock on the back room door."},
 "1": {"name": "Mark", "profile": "",
@@ -227,9 +235,12 @@ var scene_11 := {
 "text": "'I wouldn't want to impose or anything...'"},
 "38": {"name": "Mark", "profile": "lily",
 "text": "'I would be delighted to have you over for dinner sometime.'"},
+},
+"background": "res://assets/backgrounds/office.jpg",
 }
 
 var scene_12 := {
+"dialogue": {
 "0": {"name": "Mark", "profile": "",
 "text": "It took much longer to clean up than I expected."},
 "1": {"name": "Mark", "profile": "",
@@ -262,10 +273,13 @@ var scene_12 := {
 "text": "'Oh, but I'm not trying to be nosy or anything.'"},
 "15": {"name": "Lily", "profile": "lily",
 "text": "'You don't have to tell me anything if you don't want to."},
+},
+"background": "res://assets/backgrounds/room2-min.jpg",
 }
 
 var choice_3 = ["Explain other bedroom", "Explain sticky notes"]
 var scene_13 := {
+"dialogue": {
 "0": {"name": "Mark", "profile": "",
 "text": "The other bedroom was my sister's room."},
 "1": {"name": "Mark", "profile": "",
@@ -288,8 +302,11 @@ var scene_13 := {
 "text": "Lily takes her leave with promises that she'll have an extra special lunch tomorrow to pay me back for tonight."},
 "10": {"name": "Mark", "profile": "",
 "text": "I don't bother trying to argue that the dinner was to pay her back for her lunches."},
+},
+"background": "res://assets/backgrounds/room2-min.jpg",
 }
 var scene_14 := {
+"dialogue": {
 "0": {"name": "Mark", "profile": "",
 "text": "'There are labels everywhere because I'm colorblind.'"},
 "1": {"name": "Mark", "profile": "",
@@ -320,8 +337,11 @@ var scene_14 := {
 "text": "Lily takes her leave with promises that she'll have an extra special lunch tomorrow to pay me back for tonight."},
 "14": {"name": "Mark", "profile": "",
 "text": "I don't bother trying to argue that the dinner was to pay her back for her lunches."},
+},
+"background": "res://assets/backgrounds/room2-min.jpg",
 }
 var scene_15 := {
+"dialogue": {
 "0": {"name": "Mark", "profile": "lily",
 "text": "Lily does indeed make a special lunch the next day,"},
 "1": {"name": "Mark", "profile": "lily",
@@ -380,10 +400,13 @@ var scene_15 := {
 "text": "'Sorry, I was just thinking a bit about how to phrase it.'"},
 "28": {"name": "Mark", "profile": "",
 "text": "'I think...'"},
+},
+"background": "res://assets/backgrounds/office.jpg",
 }
 
 var choice_4 = ["Encourage her to make it work","Persuade her against it."]
 var scene_16 := {
+"dialogue": {
 "0": {"name": "Mark", "profile": "",
 "text": "'I think it's obvious what you should do.'"},
 "1": {"name": "Mark", "profile": "",
@@ -410,8 +433,11 @@ var scene_16 := {
 "text": "'...'"},
 "12": {"name": "Mark", "profile": "",
 "text": "'...'"},
+},
+"background": "res://assets/backgrounds/office.jpg",
 }
 var scene_17 := {
+"dialogue": {
 "0": {"name": "Mark", "profile": "",
 "text": "'I think it's obvious what you should do.'"},
 "1": {"name": "Mark", "profile": "",
@@ -438,4 +464,6 @@ var scene_17 := {
 "text": "'...'"},
 "12": {"name": "Mark", "profile": "",
 "text": "'...'"},
+},
+"background": "res://assets/backgrounds/office.jpg",
 }

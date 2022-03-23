@@ -49,6 +49,7 @@ var scene_18 := {
 "22": {"name": "Mark", "profile": "lily",
 "text": "'...'"},
 },
+"background": "res://assets/backgrounds/office.jpg",
 }
 var choice_5 = ["Support her","Confess romantic feelings for her"]
 var scene_20 := {
@@ -90,6 +91,7 @@ var scene_20 := {
 "17": {"name": "Mark", "profile": "lily",
 "text": "'Sure...'"},
 },
+"background": "res://assets/backgrounds/office.jpg",
 }
 var scene_21 := {
 "dialogue": {
@@ -134,6 +136,7 @@ var scene_21 := {
 "19": {"name": "Mark", "profile": "lily",
 "text": "'Sure...'"},
 },
+"background": "res://assets/backgrounds/office.jpg",
 }
 
 var scene_24 := {
@@ -160,13 +163,14 @@ var scene_24 := {
 "text": "..."},
 "10": {"name": "Mark", "profile": "",
 "text": "..."},
-"11": {"name": "Mark", "profile": "",
+"11": {"name": "Mark", "profile": "","background": "res://assets/backgrounds/cherry-min.jpg",
 "text": "..."},
 "12": {"name": "Mark", "profile": "",
 "text": "Beautiful."},
 "13": {"name": "", "profile": "",
 "text": "GOOD ENDING"},
 },
+"background": "res://assets/backgrounds/cherry-grey-min.jpg",
 }
 
 
@@ -217,6 +221,7 @@ var scene_19 := {
 "22": {"name": "Mark", "profile": "lily",
 "text": "'...'"},
 },
+"background": "res://assets/backgrounds/office.jpg",
 }
 var choice_6 = ["Support her","Confess romantic feelings for her"]
 
@@ -253,6 +258,7 @@ var scene_22 := {
 "14": {"name": "Mark", "profile": "",
 "text": "Lily nods and listens, but she remains a bit more quiet than usual."},
 },
+"background": "res://assets/backgrounds/office.jpg",
 }
 var scene_23 := {
 "dialogue": {
@@ -303,6 +309,7 @@ var scene_23 := {
 "22": {"name": "Mark", "profile": "",
 "text": "I get up and lead her to the door, and gently close it behind her."},
 },
+"background": "res://assets/backgrounds/office.jpg",
 }
 
 var scene_25 := {
@@ -362,6 +369,7 @@ var scene_25 := {
 "27": {"name": "Mark", "profile": "",
 "text": "BAD ENDING"},
 },
+"background": "res://assets/backgrounds/counter.jpg",
 }
 var scene_26 := {
 "dialogue": {
@@ -394,6 +402,7 @@ var scene_26 := {
 "13": {"name": "Mark", "profile": "old-man",
 "text": "With that, the boss takes his leave, and I settle into work."},
 },
+"background": "res://assets/backgrounds/office.jpg",
 }
 var scene_27 = {
 "dialogue": {
@@ -426,4 +435,5 @@ var scene_27 = {
 "13": {"name": "", "profile": "",
 "text": "NEUTRAL ENDING"},
 },
+"background": "res://assets/backgrounds/office.jpg",
 }

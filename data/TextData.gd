@@ -64,7 +64,7 @@ var scenes := {
 "0": {"name": "Test", "profile": "test",
 "text": "This is generic error return result when text is missing."},
 },
-"background": "res://assets/backgrounds/park-min.jpg",
+"background": "res://assets/backgrounds/room2-min.jpg",
 "music": "res://assets/audio/In_the_Bleak_Midwinter.ogg",
 	},
 # Play Scenes

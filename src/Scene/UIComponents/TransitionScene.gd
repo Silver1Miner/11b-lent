@@ -1,6 +1,7 @@
 extends ColorRect
 
 onready var _animation = $AnimationPlayer
+signal transition_half_finished()
 signal transition_finished()
 
 func _ready() -> void:
@@ -17,6 +18,7 @@ func transition_to(_next_scene) -> void:
 func play_transition() -> void:
 	_animation.play("Fade")
 	yield(_animation, "animation_finished")
+	emit_signal("transition_half_finished")
 	_animation.play_backwards("Fade")
 	yield(_animation, "animation_finished")
 	emit_signal("transition_finished")

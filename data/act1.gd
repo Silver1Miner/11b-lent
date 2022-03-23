@@ -58,7 +58,9 @@ var scene_1 = { # to scene 2
 "text": "'Great! I'll be back soon.'"},
 "18": {"name": "Mark",
 "text": "The Old Man leaves without another word, and I dutifully step out into the front..."},
-},}
+},
+"background": "res://assets/backgrounds/office.jpg",
+}
 
 var scene_2 = {
 "dialogue": {
@@ -77,6 +79,7 @@ var scene_2 = {
 "6": {"name": "Mark", "profile": "lily-back",
 "text": "I should just hang back."},
 },
+"background": "res://assets/backgrounds/counter.jpg",
 }
 var choice_1 = ["Hang back", "Offer to help"]
 var scene_4 = { # Help, continue game, to scene 6
@@ -124,6 +127,7 @@ var scene_4 = { # Help, continue game, to scene 6
 "20": {"name": "Mark", "profile": "",
 "text": "Did she say she'd see me again soon?"},
 },
+"background": "res://assets/backgrounds/counter.jpg",
 }
 var scene_3 = { # Refuse to help, to scene 5
 "dialogue": {
@@ -150,6 +154,7 @@ var scene_3 = { # Refuse to help, to scene 5
 "10": {"name": "Mark", "profile": "",
 "text": "Maybe I should have said something."},
 },
+"background": "res://assets/backgrounds/counter.jpg",
 }
 
 var scene_5 := { # to Poor ending
@@ -195,6 +200,7 @@ var scene_5 := { # to Poor ending
 "19": {"name": "",
 "text": "POOR END"},
 },
+"background": "res://assets/backgrounds/office.jpg",
 }
 
 var scene_6 := { # to scene 7
@@ -232,6 +238,7 @@ var scene_6 := { # to scene 7
 "15": {"name": "Old Man", "profile": "old-man",
 "text": "'Yeah, come on out and see the new employee.'"},
 },
+"background": "res://assets/backgrounds/office.jpg",
 }
 
 var scene_7 := { # to scene 8
@@ -247,4 +254,5 @@ var scene_7 := { # to scene 8
 "4": {"name": "Lily", "profile": "lily",
 "text": "'Let's work together well, Mark.'"},
 },
+"background": "res://assets/backgrounds/counter.jpg",
 }
