@@ -39,5 +39,3 @@ func _process(_delta: float) -> void:
 		available[0].play()
 		available.pop_front()
 
-
-

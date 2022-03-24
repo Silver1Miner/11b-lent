@@ -23,9 +23,9 @@ func _ready() -> void:
 	$Timer.autostart = true
 	if $Timer.connect("timeout", self, "_on_timer_timeout") != OK:
 		push_error("timer connect fail")
-	#play_dialogue(text_dialogue)
+	#play_dialogue(text_dialogue, 1)
 
-func play_dialogue(text_data) -> void:
+func play_dialogue(text_data, start_line = 0) -> void:
 	visible = true
 	$Panels/Right/TextOptions.visible = true
 	$Panels/Center.color = Color(0,0,0,200.0/255)
@@ -33,7 +33,7 @@ func play_dialogue(text_data) -> void:
 	$Panels/Right.color = Color(0,0,0,200.0/255)
 	$Timer.start()
 	dialogue = text_data
-	page = "0"
+	page = str(start_line)
 	text.set_text(dialogue[page]["text"])
 	nametag.set_text(dialogue[page]["name"])
 	if "profile" in dialogue[page] and dialogue[page]["profile"] in TextData.profiles:
@@ -50,6 +50,7 @@ func _on_next() -> void:
 		if text.get_visible_characters() > text.get_total_character_count():
 			if int(page) < dialogue.size() - 1:
 				page = str(int(page) + 1)
+				PlayerData.current_line = int(page)
 				text.set_text(dialogue[page]["text"])
 				nametag.set_text(dialogue[page]["name"])
 				if "profile" in dialogue[page] and dialogue[page]["profile"] in TextData.profiles:

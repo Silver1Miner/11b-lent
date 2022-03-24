@@ -12,7 +12,7 @@ func _ready() -> void:
 		push_error("UI signal connect fail")
 	choice.visible = false
 	#yield($TransitionScene, "transition_finished")
-	#$Textbox.play_dialogue(TextData.get_scene(PlayerData.current_scene))
+	#$Textbox.play_dialogue(TextData.get_scene(PlayerData.current_scene), PlayerData.current_line)
 	play_scene(false)
 
 func play_scene(is_fade: bool) -> void:
@@ -29,13 +29,14 @@ func play_scene(is_fade: bool) -> void:
 	$Background.set_texture(load(TextData.get_texture(PlayerData.current_scene)))
 	if is_fade:
 		yield($TransitionScene, "transition_finished")
-	$Textbox.play_dialogue(TextData.get_scene(PlayerData.current_scene))
+	$Textbox.play_dialogue(TextData.get_scene(PlayerData.current_scene), PlayerData.current_line)
 
 func _on_change_background(background) -> void:
 	$Background.set_texture(load(background))
 
 func _on_text_finished() -> void:
 	print("finished ", PlayerData.current_scene)
+	PlayerData.current_line = 0
 	if PlayerData.current_scene in TextData.endings:
 		$TransitionScene.transition_to(PlayerData.credits)
 	elif TextData.scene_order[PlayerData.current_scene] is Array:
