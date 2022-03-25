@@ -400,7 +400,7 @@ var scene_15 := {
 "text": "'But I always really, really liked him.'"},
 "27": {"name": "Lily", "profile": "lily",
 "text": "'Mark, what do you think I should do?'"},
-"28": {"name": "Mark", "profile": "lily",
+"28": {"name": "Mark", "profile": "lily", "desaturate_profile": true,
 "text": "'...'"},
 "29": {"name": "Mark", "profile": "lily",
 "text": "'...'"},

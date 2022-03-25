@@ -2,6 +2,7 @@ extends Control
 
 signal text_finished()
 signal change_background(background)
+signal saturate_background()
 var page = "0"
 var text_playing = true
 var dialogue = {}
@@ -19,6 +20,10 @@ var text_dialogue = {
 }
 
 func _ready() -> void:
+	if PlayerData.current_scene > 15 or (PlayerData.current_scene == 15 and PlayerData.current_line >= 28):
+		$LeftProfile.material.set_shader_param("saturation", 0.0)
+	else:
+		$LeftProfile.material.set_shader_param("saturation", 1.0)
 	$Timer.wait_time = 0.02
 	$Timer.autostart = true
 	if $Timer.connect("timeout", self, "_on_timer_timeout") != OK:
@@ -59,6 +64,11 @@ func _on_next() -> void:
 					avatar.texture = null
 				if "background" in dialogue[page]:
 					emit_signal("change_background", dialogue[page]["background"])
+				if "desaturate_profile" in dialogue[page]:
+					print("desaturate")
+					$LeftProfile/AnimationPlayer.play("Desaturate")
+				if "saturate_background" in dialogue[page]:
+					emit_signal("saturate_background")
 				text.set_visible_characters(0)
 			elif int(page) >= dialogue.size() - 1:
 				end_text()

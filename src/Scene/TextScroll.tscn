@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://assets/ui/UI.tres" type="Theme" id=1]
-[ext_resource path="res://assets/backgrounds/cherry-grey-min.jpg" type="Texture" id=2]
+[ext_resource path="res://assets/backgrounds/cherry-min.jpg" type="Texture" id=2]
 [ext_resource path="res://src/Scene/UIComponents/TransitionScene.tscn" type="PackedScene" id=3]
 [ext_resource path="res://src/Scene/TextScroll.gd" type="Script" id=4]
+[ext_resource path="res://src/Scene/UIComponents/Desaturate.tres" type="Material" id=5]
 
 [node name="TextScroll" type="Control"]
 anchor_right = 1.0
@@ -13,6 +14,7 @@ script = ExtResource( 4 )
 
 [node name="image" type="TextureRect" parent="."]
 self_modulate = Color( 0.392157, 0.392157, 0.392157, 1 )
+material = ExtResource( 5 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 texture = ExtResource( 2 )

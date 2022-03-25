@@ -77,6 +77,8 @@ var scenes := {
 	17: act2.scene_17,
 	18: act3.scene_18, 20: act3.scene_20, 21: act3.scene_21,
 	24: act3.scene_24, # GOOD ENDING
-	19: act3.scene_19, 25: act3.scene_25, # Bad Ending
+	19: act3.scene_19,
+	22: act3.scene_22, 23: act3.scene_23,
+	25: act3.scene_25, # Bad Ending
 	26: act3.scene_26, 27: act3.scene_27, # Neutral Ending
 }

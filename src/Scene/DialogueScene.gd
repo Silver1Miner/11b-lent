@@ -8,6 +8,8 @@ func _ready() -> void:
 		push_error("UI signal connect fail")
 	if textbox.connect("change_background", self, "_on_change_background") != OK:
 		push_error("UI signal connect fail")
+	if textbox.connect("saturate_background", self, "_on_saturate_background") != OK:
+		push_error("UI signal connect fail")
 	if choice.connect("choice_made", self, "_on_choice_made") != OK:
 		push_error("UI signal connect fail")
 	choice.visible = false
@@ -33,6 +35,9 @@ func play_scene(is_fade: bool) -> void:
 
 func _on_change_background(background) -> void:
 	$Background.set_texture(load(background))
+
+func _on_saturate_background() -> void:
+	$Background/AnimationPlayer.play("Saturate")
 
 func _on_text_finished() -> void:
 	print("finished ", PlayerData.current_scene)

@@ -11,8 +11,7 @@ var main_menu: PackedScene = preload("res://src/Menu/MainMenu.tscn")
 var dialogue_scene: PackedScene = preload("res://src/Scene/DialogueScene.tscn")
 var credits: PackedScene = preload("res://src/Scene/TextScroll.tscn")
 var title_card: PackedScene = preload("res://src/Scene/TitleCard.tscn")
-var ending_background = preload("res://assets/backgrounds/cherry-grey-min.jpg")
-var good_ending_background = preload("res://assets/backgrounds/cherry-min.jpg")
+var ending_background = preload("res://assets/backgrounds/cherry-min.jpg")
 
 func load_player_data() -> void:
 	var save_game = File.new()

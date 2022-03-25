@@ -26,7 +26,10 @@ func _ready() -> void:
 	AudioManager.play_music("res://assets/audio/In_the_Bleak_Midwinter.ogg",0)
 	base_speed = 30
 	text = credits.duplicate(true)
-	#$image.texture = PlayerData.ending_background
+	if PlayerData.current_scene == 24:
+		$image.material.set_shader_param("saturation", 1.0)
+	else:
+		$image.material.set_shader_param("saturation", 0.0)
 	next_level = PlayerData.main_menu
 
 func _process(delta: float) -> void:
