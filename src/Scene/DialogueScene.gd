@@ -22,19 +22,20 @@ func play_scene(is_fade: bool) -> void:
 		PlayerData.completed_scenes.append(PlayerData.current_scene)
 		PlayerData.save_player_data()
 	$Textbox.active = true
-	if TextData.get_music(PlayerData.current_scene) != "res://assets/audio/The_Old_Rugged_Cross.ogg":
+	if TextData.get_music(PlayerData.current_scene) != "cross":
 		AudioManager.play_music(TextData.get_music(PlayerData.current_scene))
 	if is_fade:
 		$TransitionScene.play_transition()
 		yield($TransitionScene, "transition_half_finished")
 	$Textbox/LeftProfile.texture = null
-	$Background.set_texture(load(TextData.get_texture(PlayerData.current_scene)))
+	$Background.set_texture((TextData.get_texture(PlayerData.current_scene)))
 	if is_fade:
 		yield($TransitionScene, "transition_finished")
+	yield(get_tree().create_timer(0.5), "timeout")
 	$Textbox.play_dialogue(TextData.get_scene(PlayerData.current_scene), PlayerData.current_line)
 
 func _on_change_background(background) -> void:
-	$Background.set_texture(load(background))
+	$Background.set_texture(background)
 
 func _on_saturate_background() -> void:
 	$Background/AnimationPlayer.play("Saturate")

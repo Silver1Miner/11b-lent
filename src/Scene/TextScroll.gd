@@ -23,11 +23,12 @@ var lines := []
 var text := []
 
 func _ready() -> void:
-	AudioManager.play_music("res://assets/audio/The_Old_Rugged_Cross.ogg",0)
+	AudioManager.play_music("s2",0)
 	base_speed = 30
 	text = credits.duplicate(true)
 	if PlayerData.current_scene == 24:
 		$image.material.set_shader_param("saturation", 1.0)
+		AudioManager.play_music("s3",0)
 	else:
 		$image.material.set_shader_param("saturation", 0.0)
 	next_level = PlayerData.main_menu
@@ -116,6 +117,6 @@ var credits = [
 		"living or dead,",
 		"is entirely coincidental."
 	],[
-		"For 'Lily'"
+		""
 	]
 ]

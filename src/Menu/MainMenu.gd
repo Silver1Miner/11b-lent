@@ -2,7 +2,7 @@ extends Control
 
 func _ready() -> void:
 	PlayerData.load_player_data()
-	AudioManager.play_music("res://assets/audio/The_Old_Rugged_Cross.ogg", 0)
+	AudioManager.play_music("cross", 0)
 	if OS.get_name() == "HTML5":
 		$Options/Quit.visible = false
 	$Options/New.grab_focus()

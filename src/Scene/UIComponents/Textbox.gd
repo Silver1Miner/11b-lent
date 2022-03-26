@@ -24,7 +24,7 @@ func _ready() -> void:
 		$LeftProfile.material.set_shader_param("saturation", 0.0)
 	else:
 		$LeftProfile.material.set_shader_param("saturation", 1.0)
-	$Timer.wait_time = 0.02
+	$Timer.wait_time = PlayerData.text_delay
 	$Timer.autostart = true
 	if $Timer.connect("timeout", self, "_on_timer_timeout") != OK:
 		push_error("timer connect fail")
@@ -51,6 +51,7 @@ func play_dialogue(text_data, start_line = 0) -> void:
 	set_process_input(true)
 
 func _on_next() -> void:
+	$Timer.wait_time = PlayerData.text_delay
 	if text_playing:
 		if text.get_visible_characters() > text.get_total_character_count():
 			if int(page) < dialogue.size() - 1:

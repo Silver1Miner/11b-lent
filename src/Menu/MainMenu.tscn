@@ -1,13 +1,14 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://src/Menu/MainMenu.gd" type="Script" id=1]
 [ext_resource path="res://src/Menu/SettingsMenu.tscn" type="PackedScene" id=2]
-[ext_resource path="res://assets/backgrounds/cherry-grey-min.jpg" type="Texture" id=3]
+[ext_resource path="res://src/Scene/UIComponents/Desaturate.tres" type="Material" id=3]
 [ext_resource path="res://assets/ui/UI.tres" type="Theme" id=4]
 [ext_resource path="res://assets/profiles/lily-back.png" type="Texture" id=5]
 [ext_resource path="res://assets/fonts/Asap-Bold.ttf" type="DynamicFontData" id=6]
 [ext_resource path="res://src/Menu/Extras.tscn" type="PackedScene" id=7]
 [ext_resource path="res://src/Menu/SaveMenu.tscn" type="PackedScene" id=8]
+[ext_resource path="res://assets/backgrounds/cherry-min.jpg" type="Texture" id=9]
 
 [sub_resource type="DynamicFont" id=1]
 size = 64
@@ -21,9 +22,10 @@ script = ExtResource( 1 )
 
 [node name="Background" type="TextureRect" parent="."]
 self_modulate = Color( 0.458824, 0.458824, 0.458824, 1 )
+material = ExtResource( 3 )
 anchor_right = 1.0
 anchor_bottom = 1.0
-texture = ExtResource( 3 )
+texture = ExtResource( 9 )
 expand = true
 
 [node name="Options" type="VBoxContainer" parent="."]

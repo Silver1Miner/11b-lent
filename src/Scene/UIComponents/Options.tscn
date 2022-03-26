@@ -8,7 +8,7 @@
 anchor_right = 1.0
 anchor_bottom = 1.0
 theme = ExtResource( 1 )
-color = Color( 0, 0, 0, 0.705882 )
+color = Color( 0, 0, 0, 0.862745 )
 script = ExtResource( 2 )
 
 [node name="Options" type="VBoxContainer" parent="."]
@@ -43,9 +43,6 @@ margin_left = 50.0
 margin_top = 50.0
 margin_right = 250.0
 margin_bottom = 164.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="MusicLabel" type="Label" parent="VolumeControls"]
 margin_right = 200.0
@@ -78,6 +75,23 @@ max_value = 1.0
 step = 0.1
 value = 1.0
 
+[node name="TextLabel" type="Label" parent="VolumeControls"]
+margin_top = 48.0
+margin_right = 200.0
+margin_bottom = 78.0
+rect_min_size = Vector2( 0, 30 )
+text = "Text Delay"
+valign = 2
+
+[node name="TextDelay" type="HSlider" parent="VolumeControls"]
+margin_top = 82.0
+margin_right = 200.0
+margin_bottom = 103.0
+min_value = 0.01
+max_value = 0.1
+step = 0.01
+value = 0.01
+
 [node name="SaveMenu" parent="." instance=ExtResource( 3 )]
 visible = false
 
@@ -86,3 +100,4 @@ visible = false
 [connection signal="pressed" from="Options/ToSaveMenu" to="." method="_on_ToSaveMenu_pressed"]
 [connection signal="value_changed" from="VolumeControls/MusicVolume" to="." method="_on_MusicVolume_value_changed"]
 [connection signal="value_changed" from="VolumeControls/SoundVolume" to="." method="_on_SoundVolume_value_changed"]
+[connection signal="value_changed" from="VolumeControls/TextDelay" to="." method="_on_TextDelay_value_changed"]

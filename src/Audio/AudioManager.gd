@@ -3,6 +3,12 @@ extends AudioStreamPlayer
 onready var tween = $Tween
 var previous_path: String = ""
 
+var tracks := {
+	"cross": preload("res://assets/audio/The_Old_Rugged_Cross.ogg"),
+	"s2": preload("res://assets/audio/Spring2.ogg"),
+	"s3": preload("res://assets/audio/Spring3.ogg")
+}
+
 # MUSIC
 func play_music(music_path: String, start: float = 0) -> void:
 	if music_path == previous_path:
@@ -12,7 +18,7 @@ func play_music(music_path: String, start: float = 0) -> void:
 	yield(tween, "tween_completed")
 	tween.interpolate_property(self, "volume_db", -20, linear2db(PlayerData.music_db), 1.0, 1, Tween.EASE_IN, 0)
 	tween.start()
-	stream = load(music_path)
+	stream = tracks[music_path] #load(music_path)
 	play(start)
 	previous_path = music_path
 

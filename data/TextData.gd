@@ -5,10 +5,11 @@ func get_scene(scene_id) -> Dictionary:
 		return scenes[scene_id]["dialogue"]
 	return scenes[-1]["dialogue"]
 
-func get_texture(scene_id) -> String:
+func get_texture(scene_id) -> Texture:
 	if scene_id in scenes and "background" in scenes[scene_id]:
-		return scenes[scene_id]["background"]
-	return scenes[-1]["background"]
+		if scenes[scene_id]["background"] in backgrounds:
+			return backgrounds[scenes[scene_id]["background"]]
+	return backgrounds[scenes[-1]["background"]]
 
 func get_music(scene_id) -> String:
 	if scene_id in scenes and "music" in scenes[scene_id]:
@@ -19,6 +20,13 @@ var profiles := {
 	"lily": preload("res://assets/profiles/lily.png"),
 	"lily-back": preload("res://assets/profiles/lily-back.png"),
 	"old-man": preload("res://assets/profiles/oldman.png")
+}
+
+var backgrounds: = {
+	"room": preload("res://assets/backgrounds/room2-min.jpg"),
+	"office": preload("res://assets/backgrounds/office.jpg"),
+	"counter": preload("res://assets/backgrounds/counter.jpg"),
+	"cherry": preload("res://assets/backgrounds/cherry-min.jpg")
 }
 
 var scene_order := {
@@ -64,8 +72,8 @@ var scenes := {
 "0": {"name": "Test", "profile": "test",
 "text": "This is generic error return result when text is missing."},
 },
-"background": "res://assets/backgrounds/room2-min.jpg",
-"music": "res://assets/audio/The_Old_Rugged_Cross.ogg",
+"background": "room",
+"music": "cross",
 	},
 # Play Scenes
 	0: act1.scene_0,1: act1.scene_1,2: act1.scene_2,

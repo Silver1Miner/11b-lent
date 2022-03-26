@@ -73,7 +73,7 @@ var scene_8 := { # to scene 9
 "34": {"name": "Lily", "profile": "lily",
 "text": "'I mean, only if you're willing of course."},
 },
-"background": "res://assets/backgrounds/office.jpg",
+"background": "office",
 }
 var choice_2 = ["Not willing to share","Let her read them"]
 
@@ -119,7 +119,7 @@ var scene_9 : = {
 "text": "I can't help but smile."},
 "19": {"name": "Mark", "profile": "lily",
 "text": "Against my better judgment, I can't but feel almost fond of her."},
-},"background": "res://assets/backgrounds/office.jpg",
+},"background": "office",
 }
 
 var scene_10 := {
@@ -153,7 +153,7 @@ var scene_10 := {
 "13": {"name": "Mark", "profile": "lily",
 "text": "Against my better judgment, I can't but feel almost fond of her."},
 },
-"background": "res://assets/backgrounds/office.jpg",
+"background": "office",
 }
 var scene_11 := {
 "dialogue": {
@@ -236,7 +236,7 @@ var scene_11 := {
 "38": {"name": "Mark", "profile": "lily",
 "text": "'I would be delighted to have you over for dinner sometime.'"},
 },
-"background": "res://assets/backgrounds/office.jpg",
+"background": "office",
 }
 
 var scene_12 := {
@@ -276,7 +276,7 @@ var scene_12 := {
 "16": {"name": "Lily", "profile": "lily",
 "text": "'You don't have to tell me anything if you don't want to."},
 },
-"background": "res://assets/backgrounds/room2-min.jpg",
+"background": "room",
 }
 
 var choice_3 = ["Explain other bedroom", "Explain sticky notes"]
@@ -305,7 +305,7 @@ var scene_13 := {
 "10": {"name": "Mark", "profile": "",
 "text": "I don't bother trying to argue that the dinner was to pay her back for her lunches."},
 },
-"background": "res://assets/backgrounds/room2-min.jpg",
+"background": "room",
 }
 var scene_14 := {
 "dialogue": {
@@ -340,7 +340,7 @@ var scene_14 := {
 "14": {"name": "Mark", "profile": "",
 "text": "I don't bother trying to argue that the dinner was to pay her back for her lunches."},
 },
-"background": "res://assets/backgrounds/room2-min.jpg",
+"background": "room",
 }
 var scene_15 := {
 "dialogue": {
@@ -411,7 +411,7 @@ var scene_15 := {
 "32": {"name": "Mark", "profile": "lily",
 "text": "'I think...'"},
 },
-"background": "res://assets/backgrounds/office.jpg",
+"background": "office",
 }
 
 var choice_4 = ["Encourage her to make it work","Persuade her against it."]
@@ -442,7 +442,7 @@ var scene_16 := {
 "11": {"name": "Mark", "profile": "lily",
 "text": "'...'"},
 },
-"background": "res://assets/backgrounds/office.jpg",
+"background": "office",
 }
 var scene_17 := {
 "dialogue": {
@@ -471,5 +471,5 @@ var scene_17 := {
 "11": {"name": "Mark", "profile": "lily",
 "text": "'...'"},
 },
-"background": "res://assets/backgrounds/office.jpg",
+"background": "office",
 }

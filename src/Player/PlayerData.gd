@@ -2,6 +2,7 @@ extends Node
 
 var music_db = 0.2
 var sound_db = 0.1
+var text_delay = 0.02
 var new_game = false
 var current_scene := 0
 var current_line := 0
@@ -21,6 +22,13 @@ func load_player_data() -> void:
 	completed_scenes = parse_json(save_game.get_line())
 	music_db = parse_json(save_game.get_line())
 	sound_db = parse_json(save_game.get_line())
+	text_delay = parse_json(save_game.get_line())
+	if not music_db:
+		music_db = 0.2
+	if not sound_db:
+		sound_db = 0.1
+	if not text_delay:
+		text_delay = 0.02
 	save_game.close()
 
 func save_player_data() -> void:
@@ -29,6 +37,7 @@ func save_player_data() -> void:
 	save_game.store_line(to_json(completed_scenes))
 	save_game.store_line(to_json(music_db))
 	save_game.store_line(to_json(sound_db))
+	save_game.store_line(to_json(text_delay))
 	save_game.close()
 
 var default_save = {
@@ -42,7 +51,15 @@ func get_save_date(slot) -> String:
 	if D.dir_exists("user://save"):
 		if F.open(str("user://save/",slot,".save"), File.READ_WRITE) == OK:
 			var time = OS.get_datetime_from_unix_time(F.get_modified_time(str("user://save/",slot,".save")))
-			return str(time["year"])+"/"+str(time["month"])+"/"+str(time["day"])+" "+str(time["hour"])+":"+str(time["minute"])+":"+str(time["second"])
+			var scene = load_game(slot)["current_scene"]
+			var act = ""
+			if scene > 17:
+				act = "Act III "
+			elif scene > 7:
+				act = "Act II "
+			else:
+				act = "Act I "
+			return act + "Scene " + str(scene) + " (" + str(time["year"])+"/"+str(time["month"])+"/"+str(time["day"])+" "+str(time["hour"])+":"+str(time["minute"])+":"+str(time["second"]) + ")"
 		else:
 			return "no save entry"
 	else:
@@ -55,8 +72,8 @@ func load_game(slot) -> Dictionary:
 	if D.dir_exists("user://save"):
 		if F.open(str("user://save/",slot,".save"), File.READ_WRITE) == OK:
 			var temp_d = F.get_var()
-			print(temp_d)
-			print(F.get_modified_time(str("user://save/",slot,".save")))
+			#print(temp_d)
+			#print(F.get_modified_time(str("user://save/",slot,".save")))
 			return temp_d
 		else:
 			print("save file doesn't exist, creating one") 

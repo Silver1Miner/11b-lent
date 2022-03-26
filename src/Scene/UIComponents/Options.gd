@@ -9,6 +9,7 @@ func _unhandled_input(event: InputEvent) -> void:
 		visible = true
 		$VolumeControls/MusicVolume.set_value(db2linear(AudioServer.get_bus_volume_db(AudioServer.get_bus_index("Music"))))
 		$VolumeControls/SoundVolume.set_value(db2linear(AudioServer.get_bus_volume_db(AudioServer.get_bus_index("Sound"))))
+		$VolumeControls/TextDelay.set_value(PlayerData.text_delay)
 
 func _on_Close_pressed() -> void:
 	visible = false
@@ -31,3 +32,7 @@ func _on_SoundVolume_value_changed(value: float) -> void:
 
 func _on_ToSaveMenu_pressed() -> void:
 	$SaveMenu.visible = true
+
+
+func _on_TextDelay_value_changed(value: float) -> void:
+	PlayerData.text_delay = value
