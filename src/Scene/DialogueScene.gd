@@ -22,7 +22,7 @@ func play_scene(is_fade: bool) -> void:
 		PlayerData.completed_scenes.append(PlayerData.current_scene)
 		PlayerData.save_player_data()
 	$Textbox.active = true
-	if TextData.get_music(PlayerData.current_scene) != "res://assets/Audio/In_the_Bleak_Midwinter.ogg":
+	if TextData.get_music(PlayerData.current_scene) != "res://assets/audio/The_Old_Rugged_Cross.ogg":
 		AudioManager.play_music(TextData.get_music(PlayerData.current_scene))
 	if is_fade:
 		$TransitionScene.play_transition()

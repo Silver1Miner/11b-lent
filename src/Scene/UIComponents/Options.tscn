@@ -62,6 +62,7 @@ step = 0.1
 value = 1.0
 
 [node name="SoundLabel" type="Label" parent="VolumeControls"]
+visible = false
 margin_top = 48.0
 margin_right = 200.0
 margin_bottom = 89.0
@@ -69,6 +70,7 @@ text = "
 Sound"
 
 [node name="SoundVolume" type="HSlider" parent="VolumeControls"]
+visible = false
 margin_top = 93.0
 margin_right = 200.0
 margin_bottom = 114.0

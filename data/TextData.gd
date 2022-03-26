@@ -65,7 +65,7 @@ var scenes := {
 "text": "This is generic error return result when text is missing."},
 },
 "background": "res://assets/backgrounds/room2-min.jpg",
-"music": "res://assets/audio/In_the_Bleak_Midwinter.ogg",
+"music": "res://assets/audio/The_Old_Rugged_Cross.ogg",
 	},
 # Play Scenes
 	0: act1.scene_0,1: act1.scene_1,2: act1.scene_2,

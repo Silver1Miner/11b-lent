@@ -23,7 +23,7 @@ var lines := []
 var text := []
 
 func _ready() -> void:
-	AudioManager.play_music("res://assets/audio/In_the_Bleak_Midwinter.ogg",0)
+	AudioManager.play_music("res://assets/audio/The_Old_Rugged_Cross.ogg",0)
 	base_speed = 30
 	text = credits.duplicate(true)
 	if PlayerData.current_scene == 24:
@@ -93,7 +93,8 @@ var credits = [
 		"by Jack Anderson"
 	],[
 		"SOUNDTRACK",
-		"'In the Bleak Midwinter' by Gustav Holst",
+		"'The Old Rugged Cross' by George Bannard",
+		"'La Primavera' by Antonio Vivaldi",
 		"'Lent' by Jack",
 	],[
 		"ART",

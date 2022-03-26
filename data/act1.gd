@@ -16,7 +16,7 @@ var scene_0 = { # to scene 1
 "text": "The colors slowly faded over the next spring, until all that was left was gray."},
 },
 "background": "res://assets/backgrounds/room2-min.jpg",
-"music": "res://assets/audio/In_the_Bleak_Midwinter.ogg",
+"music": "res://assets/audio/The_Old_Rugged_Cross.ogg",
 }
 var scene_1 = { # to scene 2
 "dialogue": {

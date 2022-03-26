@@ -45,6 +45,7 @@ max_value = 1.0
 step = 0.1
 
 [node name="SoundLabel" type="Label" parent="VolumeControls"]
+visible = false
 margin_top = 48.0
 margin_right = 200.0
 margin_bottom = 89.0
@@ -52,22 +53,12 @@ text = "
 Sound"
 
 [node name="SoundVolume" type="HSlider" parent="VolumeControls"]
+visible = false
 margin_top = 93.0
 margin_right = 200.0
 margin_bottom = 114.0
 max_value = 1.0
 step = 0.1
-
-[node name="FullCredits" type="Button" parent="."]
-visible = false
-margin_left = 445.0
-margin_top = 350.0
-margin_right = 544.0
-margin_bottom = 370.0
-text = "FULL CREDITS"
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Credits" type="Label" parent="."]
 margin_left = 393.0

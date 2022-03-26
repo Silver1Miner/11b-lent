@@ -1,6 +1,6 @@
 extends Node
 
-var music_db = 0.5
+var music_db = 0.2
 var sound_db = 0.1
 var new_game = false
 var current_scene := 0
