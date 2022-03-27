@@ -30,7 +30,8 @@ func _on_Load_pressed() -> void:
 func _on_Save_pressed() -> void:
 	PlayerData.save_game(current_slot)
 	print("save file ", str(current_slot))
-	visible = false
+	load_slot_names()
+	#visible = false
 
 func _on_SaveSlots_item_selected(index: int) -> void:
 	current_slot = index

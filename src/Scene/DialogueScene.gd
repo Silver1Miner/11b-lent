@@ -15,9 +15,9 @@ func _ready() -> void:
 	choice.visible = false
 	#yield($TransitionScene, "transition_finished")
 	#$Textbox.play_dialogue(TextData.get_scene(PlayerData.current_scene), PlayerData.current_line)
-	play_scene(false)
+	play_scene(false, false)
 
-func play_scene(is_fade: bool) -> void:
+func play_scene(is_fade: bool, is_choice: bool) -> void:
 	if not PlayerData.current_scene in PlayerData.completed_scenes:
 		PlayerData.completed_scenes.append(PlayerData.current_scene)
 		PlayerData.save_player_data()
@@ -27,7 +27,8 @@ func play_scene(is_fade: bool) -> void:
 	if is_fade:
 		$TransitionScene.play_transition()
 		yield($TransitionScene, "transition_half_finished")
-	$Textbox/LeftProfile.texture = null
+	if not is_choice:
+		$Textbox/LeftProfile.texture = null
 	$Background.set_texture((TextData.get_texture(PlayerData.current_scene)))
 	if is_fade:
 		yield($TransitionScene, "transition_finished")
@@ -54,11 +55,11 @@ func _on_text_finished() -> void:
 		if PlayerData.current_scene in TextData.title_scenes:
 			$TransitionScene.transition_to(PlayerData.title_card)
 		else:
-			play_scene(true)
+			play_scene(true, false)
 	else:
 		push_error("invalid data")
 
 func _on_choice_made(decision) -> void:
 	print(decision)
 	PlayerData.current_scene = TextData.scene_order[PlayerData.current_scene][decision]
-	play_scene(false)
+	play_scene(false, true)
