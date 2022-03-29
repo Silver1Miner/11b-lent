@@ -53,7 +53,6 @@ rect_min_size = Vector2( 150, 30 )
 text = "LOAD GAME"
 
 [node name="Extras" type="Button" parent="Options"]
-visible = false
 margin_top = 100.0
 margin_right = 150.0
 margin_bottom = 130.0
@@ -61,16 +60,16 @@ rect_min_size = Vector2( 0, 30 )
 text = "EXTRAS"
 
 [node name="Settings" type="Button" parent="Options"]
-margin_top = 100.0
+margin_top = 150.0
 margin_right = 150.0
-margin_bottom = 130.0
+margin_bottom = 180.0
 rect_min_size = Vector2( 150, 30 )
 text = "SETTINGS"
 
 [node name="Quit" type="Button" parent="Options"]
-margin_top = 150.0
+margin_top = 200.0
 margin_right = 150.0
-margin_bottom = 180.0
+margin_bottom = 230.0
 rect_min_size = Vector2( 150, 30 )
 text = "QUIT"
 
@@ -112,7 +111,7 @@ anchor_left = 1.0
 anchor_right = 1.0
 margin_left = -92.0
 margin_bottom = 19.0
-text = "v0.1.0 Demo "
+text = "v0.2.0 Demo "
 
 [node name="credits" type="Label" parent="."]
 anchor_left = 1.0

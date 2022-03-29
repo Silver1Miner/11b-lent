@@ -39,4 +39,4 @@ func _on_Extras_mouse_entered() -> void:
 	$Options/Extras.grab_focus()
 
 func _on_Extras_pressed() -> void:
-	$Extras.visible = true
+	$Extras.activate()

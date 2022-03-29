@@ -96,7 +96,6 @@ var credits = [
 		"SOUNDTRACK",
 		"'The Old Rugged Cross' by George Bannard",
 		"'La Primavera' by Antonio Vivaldi",
-		"'Lent' by Jack",
 	],[
 		"ART",
 		"Yanagi"
