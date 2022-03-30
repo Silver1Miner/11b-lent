@@ -54,7 +54,6 @@ anims/Saturate = SubResource( 2 )
 [node name="Textbox" parent="." instance=ExtResource( 4 )]
 
 [node name="Choice" parent="." instance=ExtResource( 6 )]
-visible = false
 
 [node name="HUD" parent="." instance=ExtResource( 3 )]
 

@@ -4,6 +4,7 @@ onready var textbox = $Textbox
 onready var choice = $Choice
 
 func _ready() -> void:
+	$Choice.visible = false
 	if textbox.connect("text_finished", self, "_on_text_finished") != OK:
 		push_error("UI signal connect fail")
 	if textbox.connect("change_background", self, "_on_change_background") != OK:
@@ -36,6 +37,8 @@ func play_scene(is_fade: bool, is_choice: bool) -> void:
 	$Textbox.play_dialogue(TextData.get_scene(PlayerData.current_scene), PlayerData.current_line)
 
 func _on_change_background(background) -> void:
+	$TransitionScene.play_transition()
+	yield($TransitionScene, "transition_half_finished")
 	$Background.set_texture(background)
 
 func _on_saturate_background() -> void:

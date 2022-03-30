@@ -16,9 +16,9 @@ func _on_Close_pressed() -> void:
 func activate() -> void:
 	update_progress_bar()
 	visible = true
-	_cg1.disabled = not 27 in PlayerData.completed_scenes
+	_cg1.disabled = not 13 in PlayerData.completed_scenes
 	_cg2.disabled = not 27 in PlayerData.completed_scenes
-	_cg3.disabled = not 27 in PlayerData.completed_scenes
+	_cg3.disabled = PlayerData.completed_scenes.size() < 28
 	print(PlayerData.completed_scenes)
 
 func populate_jukebox() -> void:
@@ -34,18 +34,18 @@ func _on_OptionButton_item_selected(index: int) -> void:
 func update_progress_bar() -> void:
 	var scenes = PlayerData.completed_scenes.size()
 	print(scenes)
-	$Progress/ProgressBar.value = scenes/27.0 * 100
+	$Progress/ProgressBar.value = scenes/28.0 * 100
 
 func _on_CG1_pressed() -> void:
-	_preview.texture = preload("res://assets/backgrounds/cherry-min.jpg")
+	_preview.texture = preload("res://assets/cg/cg1-min.jpg")
 	_preview.visible = true
 
 func _on_CG2_pressed() -> void:
-	_preview.texture = preload("res://assets/backgrounds/counter.jpg")
+	_preview.texture = preload("res://assets/cg/cg2-min.jpg")
 	_preview.visible = true
 
 func _on_CG3_pressed() -> void:
-	_preview.texture = preload("res://assets/backgrounds/office.jpg")
+	_preview.texture = preload("res://assets/cg/cg3-min.jpg")
 	_preview.visible = true
 
 func _input(event: InputEvent) -> void:

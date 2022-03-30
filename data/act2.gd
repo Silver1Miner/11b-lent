@@ -280,21 +280,21 @@ var scene_12 := {
 var choice_3 = ["Explain other bedroom", "Explain sticky notes"]
 var scene_13 := {
 "dialogue": {
-"0": {"name": "Mark", "profile": "lily",
+"0": {"name": "Mark", "profile": "",
 "text": "'The other bedroom was my sister's room.'"},
-"1": {"name": "Mark", "profile": "lily",
+"1": {"name": "Mark", "profile": "",
 "text": "'She... passed away.'"},
-"2": {"name": "Lily", "profile": "lily",
+"2": {"name": "Lily", "profile": "",
 "text": "'Oh... I'm sorry.'"},
-"3": {"name": "Mark", "profile": "lily",
+"3": {"name": "Mark", "profile": "",
 "text": "'It was a long time ago.'"},
-"4": {"name": "Mark", "profile": "lily",
+"4": {"name": "Mark", "profile": "",
 "text": "'...'"},
-"5": {"name": "Lily", "profile": "lily",
+"5": {"name": "Lily", "profile": "",
 "text": "'Would you like me to change the subject?'"},
-"6": {"name": "Mark", "profile": "lily",
+"6": {"name": "Mark", "profile": "",
 "text": "'It's quite alright.'"},
-"7": {"name": "Mark", "profile": "lily",
+"7": {"name": "Mark", "profile": "",
 "text": "(We make some more idle chit-chat afterwards, but the mood clearly changed.)"},
 "8": {"name": "Mark", "profile": "",
 "text": "(Eventually the evening draws to a close.)"},
@@ -303,7 +303,7 @@ var scene_13 := {
 "10": {"name": "Mark", "profile": "",
 "text": "(I don't bother trying to argue that the dinner was to pay her back for her lunches.)"},
 },
-"background": "room",
+"background": "cg1",
 }
 var scene_14 := {
 "dialogue": {

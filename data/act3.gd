@@ -426,14 +426,24 @@ var scene_27 = {
 "text": "(I make my way past Lily to the door.)"},
 "9": {"name": "Mark", "profile": "lily-upset",
 "text": "(I briefly glance back.)"},
-"10": {"name": "Mark", "profile": "lily-upset",
-"text": "(Lily stands quietly in the center of the room.)"},
-"11": {"name": "Mark", "profile": "lily-upset",
-"text": "(Neither of us say a word as I close the door behind me.)"},
-"12": {"name": "Mark", "profile": "lily-upset",
-"text": "..."},
-"13": {"name": "", "profile": "lily-upset",
-"text": "NEUTRAL ENDING"},
 },
 "background": "office",
+}
+
+var scene_28 = {
+"dialogue": {
+"0": {"name": "Mark", "profile": "",
+"text": "(Lily stands quietly in the center of the room.)"},
+"1": {"name": "Mark", "profile": "",
+"text": "(Neither of us say a word as I close the door behind me.)"},
+"2": {"name": "Mark", "profile": "",
+"text": "..."},
+"3": {"name": "Mark", "profile": "",
+"text": "..."},
+"4": {"name": "Mark", "profile": "",
+"text": "..."},
+"5": {"name": "", "profile": "",
+"text": "NEUTRAL ENDING"},
+},
+"background": "cg2",
 }

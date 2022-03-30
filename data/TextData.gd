@@ -27,7 +27,9 @@ var backgrounds: = {
 	"room": preload("res://assets/backgrounds/room2-min.jpg"),
 	"office": preload("res://assets/backgrounds/office.jpg"),
 	"counter": preload("res://assets/backgrounds/counter.jpg"),
-	"cherry": preload("res://assets/backgrounds/cherry-min.jpg")
+	"cherry": preload("res://assets/backgrounds/cherry-min.jpg"),
+	"cg1": preload("res://assets/cg/cg1-min.jpg"),
+	"cg2": preload("res://assets/cg/cg2-min.jpg")
 }
 
 var scene_order := {
@@ -45,9 +47,9 @@ var scene_order := {
 	18: [20, 21],
 	19: [22, 23],
 	20: 24, 21: 24,
-	22: 25, 23: 26, 26: 27
+	22: 25, 23: 26, 26: 27, 27: 28
 }
-var endings := [5, 24, 25, 27] # credits play after scene
+var endings := [5, 24, 25, 28] # credits play after scene
 var title_scenes := { # title card plays before scene
 	1: ["Act I", "Ash"],
 	8: ["Act II", "Passion"],
@@ -89,5 +91,5 @@ var scenes := {
 	19: act3.scene_19,
 	22: act3.scene_22, 23: act3.scene_23,
 	25: act3.scene_25, # Bad Ending
-	26: act3.scene_26, 27: act3.scene_27, # Neutral Ending
+	26: act3.scene_26, 27: act3.scene_27, 28: act3.scene_28# Neutral Ending
 }
