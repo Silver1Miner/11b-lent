@@ -65,4 +65,7 @@ func _on_text_finished() -> void:
 func _on_choice_made(decision) -> void:
 	print(decision)
 	PlayerData.current_scene = TextData.scene_order[PlayerData.current_scene][decision]
-	play_scene(false, true)
+	if PlayerData.current_scene == 13:
+		play_scene(true, false)
+	else:
+		play_scene(false, true)

@@ -36,3 +36,10 @@ func _on_ToSaveMenu_pressed() -> void:
 
 func _on_TextDelay_value_changed(value: float) -> void:
 	PlayerData.text_delay = value
+
+
+func _on_Button_pressed() -> void:
+	visible = true
+	$VolumeControls/MusicVolume.set_value(db2linear(AudioServer.get_bus_volume_db(AudioServer.get_bus_index("Music"))))
+	$VolumeControls/SoundVolume.set_value(db2linear(AudioServer.get_bus_volume_db(AudioServer.get_bus_index("Sound"))))
+	$VolumeControls/TextDelay.set_value(PlayerData.text_delay)
