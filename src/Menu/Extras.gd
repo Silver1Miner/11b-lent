@@ -37,20 +37,31 @@ func update_progress_bar() -> void:
 	$Progress/ProgressBar.value = scenes/28.0 * 100
 
 func _on_CG1_pressed() -> void:
-	_preview.texture = preload("res://assets/cg/cg1-min.jpg")
-	_preview.visible = true
+	if not _cg1.disabled and $Timer.is_stopped():
+		_preview.texture = preload("res://assets/cg/cg1-min.jpg")
+		_preview.visible = true
+	elif _cg1.disabled:
+		_cg1.set_texture(preload("res://assets/backgrounds/locked.png"))
 
 func _on_CG2_pressed() -> void:
-	_preview.texture = preload("res://assets/cg/cg2-min.jpg")
-	_preview.visible = true
+	if not _cg2.disabled and $Timer.is_stopped():
+		_preview.texture = preload("res://assets/cg/cg2-min.jpg")
+		_preview.visible = true
+	elif _cg1.disabled:
+		_cg1.set_texture(preload("res://assets/backgrounds/locked.png"))
 
 func _on_CG3_pressed() -> void:
-	_preview.texture = preload("res://assets/cg/cg3-min.jpg")
-	_preview.visible = true
+	if not _cg3.disabled and $Timer.is_stopped():
+		_preview.texture = preload("res://assets/cg/cg3-min.jpg")
+		_preview.visible = true
+	elif _cg1.disabled:
+		_cg1.set_texture(preload("res://assets/backgrounds/locked.png"))
 
 func _input(event: InputEvent) -> void:
 	if _preview.visible:
 		if event.is_action_pressed("ui_accept") or event.is_action_pressed("left_click"):
 			_preview.visible = false
+			$Timer.start(0.5)
 		elif event.is_action_pressed("ui_end") or event.is_action_pressed("right_click"):
 			_preview.visible = false
+			$Timer.start(0.5)

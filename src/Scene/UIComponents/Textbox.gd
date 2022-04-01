@@ -78,6 +78,7 @@ func _on_next() -> void:
 
 func _unhandled_input(event) -> void:
 	if active:
+		get_tree().set_input_as_handled()
 		if event.is_action_pressed("ui_accept") or event.is_action_pressed("left_click"):
 			_on_next()
 		elif event.is_action_pressed("ui_end") or event.is_action_pressed("right_click"):

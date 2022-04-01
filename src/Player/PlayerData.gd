@@ -66,7 +66,6 @@ func get_save_date(slot) -> String:
 		return "no save entry"
 
 func load_game(slot) -> Dictionary:
-	print("loaded game ", str(slot))
 	var F = File.new() #
 	var D = Directory.new() 
 	if D.dir_exists("user://save"):
